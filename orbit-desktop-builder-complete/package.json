@@ -2,8 +2,12 @@
   "name": "orbit-desktop",
   "version": "1.0.0",
   "description": "Orbit desktop app",
+  "homepage": "https://github.com/orbitstudy/orbit-desktop",
   "main": "main.cjs",
-  "author": "Orbit",
+  "author": {
+    "name": "Orbit",
+    "email": "orbitstudy@users.noreply.github.com"
+  },
   "license": "UNLICENSED",
   "scripts": {
     "start": "electron .",
@@ -21,6 +25,11 @@
     "asar": true,
     "mac": { "target": ["dmg", "zip"], "icon": "app/favicon.png" },
     "win": { "target": ["nsis", "zip"], "icon": "app/favicon.ico" },
-    "linux": { "target": ["AppImage", "deb"], "category": "Education", "icon": "app/favicon.png" }
+    "linux": {
+      "target": ["AppImage", "deb"],
+      "category": "Education",
+      "icon": "app/favicon.png",
+      "maintainer": "Orbit <orbitstudy@users.noreply.github.com>"
+    }
   }
 }
