@@ -1,0 +1,26 @@
+{
+  "name": "orbit-desktop",
+  "version": "1.0.0",
+  "description": "Orbit desktop app",
+  "main": "main.cjs",
+  "author": "Orbit",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^39.0.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.orbit.desktop",
+    "productName": "Orbit",
+    "directories": { "output": "dist" },
+    "files": ["main.cjs", "app/**/*", "package.json"],
+    "asar": true,
+    "mac": { "target": ["dmg", "zip"], "icon": "app/favicon.png" },
+    "win": { "target": ["nsis", "zip"], "icon": "app/favicon.ico" },
+    "linux": { "target": ["AppImage", "deb"], "category": "Education", "icon": "app/favicon.png" }
+  }
+}
